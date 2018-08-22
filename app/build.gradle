@@ -4,12 +4,13 @@ android {
     compileSdkVersion 'android-P'
     defaultConfig {
         applicationId "com.example.exalogicsolutions.inmegh_kmct"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -65,4 +66,16 @@ dependencies {
 
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
+    //for graphs and bar charts
+    implementation 'com.jjoe64:graphview:4.2.2'
+    compile 'com.github.AnyChart:AnyChart-Android:0.2.7'
+
+    compile 'com.applandeo:material-calendar-view:1.4.0'
+
+    compile 'com.github.florent37:arclayout:1.0.3'
+
+    implementation 'com.android.support:palette-v7:27.1.1'
+    compile 'com.diegodobelo.expandingview:expanding-view:0.9.4'
+
+    implementation 'com.android.support:multidex:1.0.3'
 }

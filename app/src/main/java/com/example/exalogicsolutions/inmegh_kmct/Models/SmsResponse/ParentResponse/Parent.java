@@ -18,6 +18,16 @@ public class Parent {
     @Expose
     private String mobileNo;
 
+    private Integer check_box = 2;
+
+    public Integer getCheck_box() {
+        return check_box;
+    }
+
+    public void setCheck_box(Integer check_box) {
+        this.check_box = check_box;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -6,12 +6,12 @@ public class Constants {
 
     //    public static final String Host = "http://kmct-testing.herokuapp.com/api/v1";
 //    public static final String HostImage = "http://kmct-testing.herokuapp.com/";
-    /*public static final String Host = "http://13.127.44.70/api/v1";
-    public static final String HostImage = "http://13.127.44.70/";*/
-    /*public static final String Host = "http://13.127.44.70/api/v1";
-    public static final String HostImage = "http://13.127.44.70";*/
-    public static final String Host = "http://192.168.1.46:4000/api/v1";
-    public static final String HostImage = "http://192.168.1.46:4000/";
+    /*public static final String Host = "http://192.168.1.46:4000/api/v1";
+    public static final String HostImage = "http://192.168.1.46:4000/";*/
+    public static final String Host = "http://kmct-beta.b2bnxu7dnv.ap-south-1.elasticbeanstalk.com/api/v1";
+    public static final String HostImage = "http://13.127.44.70";
+    /*public static final String Host = "http://192.168.1.46:4000/api/v1";
+    public static final String HostImage = "http://192.168.1.46:4000/";*/
     public static final String CITY = "city";
 
     public static final String SECTION = "sec";

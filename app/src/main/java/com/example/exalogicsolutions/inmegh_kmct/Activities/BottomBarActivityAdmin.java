@@ -25,7 +25,6 @@ import com.example.exalogicsolutions.inmegh_kmct.Utilities.UIUtil;
 
 import com.example.exalogicsolutions.inmegh_kmct.Fragments.AdminHomeFragment;
 import com.example.exalogicsolutions.inmegh_kmct.Fragments.AdminSubstituteFragment;
-import com.example.exalogicsolutions.inmegh_kmct.Fragments.AdminMenuFragment;
 import com.example.exalogicsolutions.inmegh_kmct.Fragments.AdminNoticeFragment;
 import com.example.exalogicsolutions.inmegh_kmct.Fragments.AdminEventFragment;
 import com.example.exalogicsolutions.inmegh_kmct.R;
@@ -71,11 +70,11 @@ public class BottomBarActivityAdmin extends AppCompatActivity {
                     loadFragment(noticeFragment);
                     return true;
 
-                case R.id.navigation_menu:
+                /*case R.id.navigation_menu:
                     toolbar.setTitle("Menu");
                     AdminMenuFragment menuFragment = new AdminMenuFragment();
                     loadFragment(menuFragment);
-                    return true;
+                    return true;*/
             }
             return false;
         }
@@ -98,7 +97,7 @@ public class BottomBarActivityAdmin extends AppCompatActivity {
 
             case R.id.logout:
                 showLogoutConfirmation();
-                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

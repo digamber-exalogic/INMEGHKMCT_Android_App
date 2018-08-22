@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.TeachersFragment">
+    tools:context=".Fragments.TeachersFragment"
+    >
 
 
     <android.support.v7.widget.AppCompatSpinner
@@ -18,7 +19,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/spinner_round_border"
+        android:background="@animator/spinner_round_border"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,10 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinCourse"
         app:layout_constraintEnd_toEndOf="@+id/spinCourse"
         app:layout_constraintHorizontal_bias="1.0"
@@ -48,7 +47,7 @@
         android:layout_height="35dp"
         android:layout_margin="8dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/spinner_round_border"
+        android:background="@animator/spinner_round_border"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinCourse" />
@@ -73,7 +72,7 @@
         app:srcCompat="@drawable/ic_arrow_drop_down_circle_black" />
 
     <android.support.design.card.MaterialCardView
-        android:id="@+id/cardView3"
+        android:id="@+id/llAllcheck"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
@@ -87,6 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinDepartment">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -98,15 +98,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:buttonTint="#FFF"/>
+                android:buttonTint="#FFF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:text="Name / Mob. No."
-                android:textSize="16sp"
                 android:textColor="#fff"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -116,8 +116,8 @@
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="Reg No."
-                android:textSize="16sp"
                 android:textColor="#fff"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -130,14 +130,15 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintTop_toBottomOf="@+id/llAllcheck"
+        >
 
     </android.support.v7.widget.RecyclerView>
 
@@ -145,19 +146,19 @@
         android:id="@+id/flbCreateSms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/rcvSmsTeacher"
-        app:layout_constraintEnd_toEndOf="@+id/rcvSmsTeacher"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="@+id/rcvSmsTeacher"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.816"
-        app:srcCompat="@drawable/ic_sms_black_24dp" />
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llAllcheck"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_sms_black_24dp"
+        tools:ignore="UnusedAttribute" />
 
 </android.support.constraint.ConstraintLayout>

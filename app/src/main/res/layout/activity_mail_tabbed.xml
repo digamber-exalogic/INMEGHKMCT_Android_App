@@ -24,7 +24,8 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:navigationIcon="@drawable/ic_back_arrow"
-            app:title="Email">
+            app:title="Email"
+            >
 
         </android.support.v7.widget.Toolbar>
 
@@ -52,6 +53,7 @@
                 android:text="@string/tab_text_3" />
 
         </android.support.design.widget.TabLayout>
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

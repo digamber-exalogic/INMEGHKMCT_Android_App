@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.exalogicsolutions.inmegh_kmct.Activities.BottomBarActivityAdmin;
+import com.example.exalogicsolutions.inmegh_kmct.Activities.EmployeeActivities.BottomBarActivityEmployee;
 import com.example.exalogicsolutions.inmegh_kmct.Database.PreferencesManger;
 import com.example.exalogicsolutions.inmegh_kmct.Utilities.Constants;
 
@@ -74,6 +75,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                     } else if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Branch Admin")) {
                         startActivity(new Intent(getApplicationContext(), BottomBarActivityAdmin.class));
                         Toast.makeText(getApplicationContext(), "Login successfully...", Toast.LENGTH_SHORT).show();
+                    } else if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Teaching Staff")) {
+                        startActivity(new Intent(getApplicationContext(), BottomBarActivityEmployee.class));
                     }
                                 /*if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Hod")) {
                                     startActivity(new Intent(getApplicationContext(), NewEmployeeLanding.class));

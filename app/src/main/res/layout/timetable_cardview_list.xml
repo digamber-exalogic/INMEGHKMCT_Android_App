@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:orientation="horizontal"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="14dp"
+            android:weightSum="1"
+            android:background="@animator/timetable_card_shape"
+            android:elevation="10dp"
+            >
+
+        <TextView
+            android:id="@+id/txDate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="15"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_weight="0.6"
+            android:textStyle="bold"
+            />
+
+            <TextView
+                android:id="@+id/txMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="June"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:background="@animator/timetable_card_border"
+            android:elevation="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+            <TextView
+                android:id="@+id/txStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Am"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:layout_weight="0.1"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+
+                <TextView
+                    android:id="@+id/txLectureName"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lecture-1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:background="@animator/timetable_lecture_shape"
+                    android:textColor="#fff"
+                    />
+
+            <TextView
+                android:id="@+id/txEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Am"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layout_weight="0.1"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+
+                <TextView
+                    android:id="@+id/txBatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batch"
+                    android:textSize="13sp"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/txSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Section"
+                    android:textSize="13sp"
+                    android:layout_weight="0.3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txTimetableName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="13sp"
+                    android:layout_weight="0.85"/>
+
+                <TextView
+                    android:id="@+id/txSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.27"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.EmployeeActivities.EmployeeProfileActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/myicon" />
+
+            <include layout="@layout/action_toolbar" />
+
+            <android.support.design.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/image">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="45dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/male_gender"
+                        android:gravity="start"
+                        android:text="Sachin Tendulkar"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txDesignation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_employee"
+                        android:gravity="start"
+                        android:text="Sr. Professor"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/txEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/employee_email"
+                        android:gravity="start"
+                        android:text="sachin001@gmail.com"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/txNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/employee_mobile"
+                        android:gravity="start"
+                        android:inputType="number"
+                        android:text="(+91) 8553276825"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnPersonalDetail"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Personal Details"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnAdditionalDetail"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Additional Details"
+                            android:textColor="#fff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnParentDetail"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Parent Details"
+                            android:textColor="#fff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnExperienceDetail"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Experience Details"
+                            android:textColor="#fff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/banar1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="103dp"
+        android:src="@drawable/admin_image"
+        app:civ_border_color="#ababab"
+        app:civ_border_width="2dp" />
+
+    <ScrollView
+        android:id="@+id/scrlView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frame_container"
+        tools:ignore="ScrollViewCount">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardPersonDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:visibility="gone"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#00B873" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/employee_personal_info"
+                    android:gravity="center"
+                    android:text="Personal Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardPersonDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#00B873" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/employee_personal_info"
+                        android:gravity="center"
+                        android:text="Personal Info"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:contentDescription="Down"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imgBtnUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:contentDescription="Down"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMajorLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/llrow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_birthday"
+                            android:gravity="start"
+                            android:text="Birthday" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="16-Nov-1992" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:weightSum="1">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_course"
+                            android:gravity="start"
+                            android:text="Course" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Bachelor of Science degree in Nursing" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_department"
+                            android:gravity="start"
+                            android:text="Department" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Bachelor of Science degree in Nursing" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardAddressDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:visibility="gone"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#FFA726" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/employee_address"
+                    android:gravity="center"
+                    android:text="Address Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardAddressDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#FFA726" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/employee_address"
+                        android:gravity="center"
+                        android:text="Address Info"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnDown2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:contentDescription="Down"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imgBtnUp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:contentDescription="Down"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMajorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llrow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:visibility="visible">
+
+                        <android.support.design.button.MaterialButton
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Current"
+                            android:textColor="#fff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            android:backgroundTint="#FFA726"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <android.support.design.button.MaterialButton
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.5"
+                            android:elevation="6dp"
+                            android:gravity="center"
+                            android:text="Permanent"
+                            android:textColor="#fff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            android:backgroundTint="#FFA726"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llrow5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_address_icon"
+                            android:gravity="start"
+                            android:text="Address" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Kakkodi, Calicut" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_country"
+                            android:gravity="start"
+                            android:text="Country" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="India" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_state"
+                            android:gravity="start"
+                            android:text="State" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Karnataka" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_city"
+                            android:gravity="start"
+                            android:text="City" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Bangalore" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_district"
+                            android:gravity="start"
+                            android:text="District" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="Bangalore" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_pincode"
+                            android:gravity="start"
+                            android:text="Pincode" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="560032" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#d2d2d2"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llrow11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:drawableStart="@drawable/employee_mobile"
+                            android:gravity="start"
+                            android:text="Mobile" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="8553276825" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrlView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frame_container"
+        tools:ignore="ScrollViewCount"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardEmergencyDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#9CCC65" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_emergency_details"
+                            android:gravity="center"
+                            android:text="Emergency Contact Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMajorLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/llrow12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_name"
+                                android:gravity="start"
+                                android:text="Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Rajeev Shukla" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view9"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_relation"
+                                android:gravity="start"
+                                android:text="Relationship" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Father" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view10"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_mobile"
+                                android:gravity="start"
+                                android:text="Mobile" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8553276825" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view11"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_residence_number"
+                                android:gravity="start"
+                                android:text="Residence" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8553276825" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view12"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_office_number"
+                                android:gravity="start"
+                                android:text="Office" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8553276825" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardAdditionalDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#8D6E63" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_additional_details"
+                            android:gravity="center"
+                            android:text="Additional Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMajorLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/llrow17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_transport"
+                                android:gravity="start"
+                                android:text="Transport" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Personal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardHealthDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#9C27B0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_health_details"
+                            android:gravity="center"
+                            android:text="Health Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMajorLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/llrow18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_disable_detail"
+                                android:gravity="start"
+                                android:text="Disabilities" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="NA" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view13"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_identification_info"
+                                android:gravity="start"
+                                android:text="Identity Mark" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Scar On Chest" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view14"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_height"
+                                android:gravity="start"
+                                android:text="Height" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="5'11" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view15"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_weight"
+                                android:gravity="start"
+                                android:text="Weight" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="63Kg" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view16"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_blood_info"
+                                android:gravity="start"
+                                android:text="Blood" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="A+" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrlView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frame_container"
+        tools:ignore="ScrollViewCount"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardParentDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#AFB42B"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_parent_icon"
+                            android:gravity="center"
+                            android:text="Parent Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMajorLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/llrow23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <android.support.design.button.MaterialButton
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_weight="0.5"
+                                android:elevation="6dp"
+                                android:gravity="center"
+                                android:text="Father"
+                                android:textColor="#fff"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="20dp"
+                                android:backgroundTint="#AFB42B"
+                                android:foreground="?android:attr/selectableItemBackground"/>
+
+                            <android.support.design.button.MaterialButton
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_weight="0.5"
+                                android:elevation="6dp"
+                                android:gravity="center"
+                                android:text="Mother"
+                                android:textColor="#fff"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="20dp"
+                                android:backgroundTint="#AFB42B"
+                                android:foreground="?android:attr/selectableItemBackground"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llrow24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_name"
+                                android:gravity="start"
+                                android:text="Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Mahesh Mishra" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view17"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_mobile"
+                                android:gravity="start"
+                                android:text="Mobile" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8553276825" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view18"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_office_number"
+                                android:gravity="start"
+                                android:text="Office" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8500036419" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view19"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_email"
+                                android:gravity="start"
+                                android:text="Email" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Bachelor of Science degree in Nursing" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view20"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/ic_employee"
+                                android:gravity="start"
+                                android:text="Occupation" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Govt. Employee" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view21"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_rupee_icon"
+                                android:gravity="start"
+                                android:text="Income" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="1000000" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view22"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_qualification_icon"
+                                android:gravity="start"
+                                android:text="Qualification" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="B.Tech" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view23"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_birthday"
+                                android:gravity="start"
+                                android:text="Date Of Birth" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="16-Nov-1992" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardSpouseDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#C62828" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_spouse_icon"
+                            android:gravity="center"
+                            android:text="Spouse Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMajorLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/llrow32"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_name"
+                                android:gravity="start"
+                                android:text="Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Mahesh Mishra" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view24"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow33"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_mobile"
+                                android:gravity="start"
+                                android:text="Mobile" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="8553276825" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view25"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow34"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_email"
+                                android:gravity="start"
+                                android:text="Email" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="mahi_007@gmail.com" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view26"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_qualification_icon"
+                                android:gravity="start"
+                                android:text="Qualification" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="B.Tech" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view27"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow36"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_birthday"
+                                android:gravity="start"
+                                android:text="Date Of Birth" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="16-Nov-1992" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view28"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:background="#d2d2d2"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/llrow37"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:drawableStart="@drawable/employee_child_icon"
+                                android:gravity="start"
+                                android:text="Children" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="02" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrlView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frame_container"
+        tools:ignore="ScrollViewCount"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardExperienceDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#78909C"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_experience_icon"
+                            android:gravity="center"
+                            android:text="Experience Info"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcvExperienceInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/cardDocumentDetailsExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#F48FB1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txTitle9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/employee_document_icon"
+                            android:gravity="center"
+                            android:text="Documents"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/imgBtnDown10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            android:visibility="visible"/>
+
+                        <ImageButton
+                            android:id="@+id/imgBtnUp10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:contentDescription="Down"
+                            app:srcCompat="@drawable/ic_arrow_up"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcvDocumentInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

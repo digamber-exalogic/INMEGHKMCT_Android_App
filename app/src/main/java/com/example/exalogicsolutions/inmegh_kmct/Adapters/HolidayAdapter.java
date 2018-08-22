@@ -120,16 +120,16 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHold
         public ViewHolder(View v) {
             super(v);
 
-            this.tvHolidayName = (TextView) v.findViewById(R.id.txHolidayName);
-            this.tvfromDate = (TextView) v.findViewById(R.id.txStartDate);
-            this.tv_to = (TextView) v.findViewById(R.id.txDivider);
-            this.txEndDate = (TextView) v.findViewById(R.id.txEndDate);
-            this.imageview_holiday = v.findViewById(R.id.imgHoliday);
-            this.delete_holiday = v.findViewById(R.id.btnHolidayDelete);
-            this.edit_holiday = v.findViewById(R.id.btnHolidayEdit);
+            tvHolidayName = v.findViewById(R.id.txHolidayName);
+            tvfromDate = v.findViewById(R.id.txStartDate);
+            tv_to = v.findViewById(R.id.txDivider);
+            txEndDate = v.findViewById(R.id.txEndDate);
+            imageview_holiday = v.findViewById(R.id.imgHoliday);
+            delete_holiday = v.findViewById(R.id.btnHolidayDelete);
+            edit_holiday = v.findViewById(R.id.btnHolidayEdit);
 
-            this.edit_holiday.setOnClickListener(this);
-            this.delete_holiday.setOnClickListener(this);
+            edit_holiday.setOnClickListener(this);
+            delete_holiday.setOnClickListener(this);
             v.setOnClickListener(this);
         }
 

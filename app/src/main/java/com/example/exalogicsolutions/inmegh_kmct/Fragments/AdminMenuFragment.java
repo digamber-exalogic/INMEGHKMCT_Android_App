@@ -1,3 +1,4 @@
+/*
 package com.example.exalogicsolutions.inmegh_kmct.Fragments;
 
 
@@ -26,9 +27,11 @@ import com.example.exalogicsolutions.inmegh_kmct.R;
 
 import java.util.ArrayList;
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class AdminMenuFragment extends Fragment {
 
     MenuAdapter menuAdapter;
@@ -38,15 +41,19 @@ public class AdminMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_admin_menu, container, false);
-        /*Log.i("myModule_list1", String.valueOf(myModule_list));*/
+        */
+/*Log.i("myModule_list1", String.valueOf(myModule_list));*//*
+
         myModule_list = view.findViewById(R.id.list_id);
-        /*Log.i("myModule_list2", String.valueOf(myModule_list));*/
+        */
+/*Log.i("myModule_list2", String.valueOf(myModule_list));*//*
+
 
         items = new ArrayList<Menu>();
 
         items.add(new Menu("College Info", R.drawable.ic_domain_black_24dp));
         items.add(new Menu("Timetable", R.drawable.ic_alarm_black_24dp));
-        items.add(new Menu("Leave", R.drawable.ic_content_paste_black_24dp));
+        items.add(new Menu("Leave", R.drawable.ic_leave));
         items.add(new Menu("Holidays", R.drawable.ic_holiday_black_24dp));
         items.add(new Menu("Exam", R.drawable.ic_exam_black_24dp));
         items.add(new Menu("Email", R.drawable.ic_email1_black_24dp));
@@ -54,7 +61,9 @@ public class AdminMenuFragment extends Fragment {
         items.add(new Menu("Student Attendance", R.drawable.ic_student_attendance));
 
         menuAdapter = new MenuAdapter(getActivity(), items);
-        /*Log.i("myModule_list3", String.valueOf(myModule_list));*/
+        */
+/*Log.i("myModule_list3", String.valueOf(myModule_list));*//*
+
         myModule_list.setAdapter(menuAdapter);
 
         myModule_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -101,3 +110,4 @@ public class AdminMenuFragment extends Fragment {
 
     }
 }
+*/

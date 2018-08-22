@@ -5,8 +5,7 @@
         android:id="@+id/logout"
         android:title="Logout"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_log"
+        android:icon="@drawable/logout_power_icon"
         app:showAsAction="always"
-
         />
 </menu>

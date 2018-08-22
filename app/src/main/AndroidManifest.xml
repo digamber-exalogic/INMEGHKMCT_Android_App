@@ -67,7 +67,22 @@
         <activity
             android:name=".Activities.AdminMenuEmailInboxShowActivity"
             android:label="      "
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Activities.EmployeeActivities.BottomBarActivityEmployee" />
+        <activity
+            android:name=".Activities.EmployeeActivities.EmployeeProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuAttendance" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuLeave" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuAssignment" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuTimetable" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuExam" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuCoursePlan" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuSeminar" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuEmail" />
+        <activity android:name=".Activities.EmployeeActivities.EmployeeMenuSms" />
+        <activity android:name=".Activities.AdminProfileActivity"
+                  android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

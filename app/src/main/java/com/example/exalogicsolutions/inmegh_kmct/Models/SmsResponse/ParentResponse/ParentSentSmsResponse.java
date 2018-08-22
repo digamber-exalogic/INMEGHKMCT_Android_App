@@ -1,9 +1,9 @@
-package com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse;
+package com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.ParentResponse;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class SentSms {
+public class ParentSentSmsResponse {
 
     @SerializedName("status")
     @Expose

@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/navigation_substitute"
-        android:icon="@drawable/ic_substitute"
+        android:icon="@drawable/ic_substitute_icon"
         android:title="@string/title_mail" />
 
     <item
@@ -21,10 +21,5 @@
         android:id="@+id/navigation_notice"
         android:icon="@drawable/ic_notice_board_black_24dp"
         android:title="@string/title_notice" />
-
-    <item
-        android:id="@+id/navigation_menu"
-        android:icon="@drawable/ic_menu_black_24dp"
-        android:title="@string/title_menu" />
 
 </menu>

@@ -16,17 +16,17 @@ import com.example.exalogicsolutions.inmegh_kmct.R;
 import java.util.ArrayList;
 
 public class TeachersAdapter extends RecyclerView.Adapter<TeachersAdapter.MyViewHolder> {
-    private static final String TAG = "InboxAdapter";
+    private static final String TAG = "TeacherAdapter";
 
     private ArrayList<Teaching> mTeachingArrayList;
     private FragmentActivity activity;
-    public static OnItemClickListener mItemClickListener;
+    public static TeachersAdapter.OnItemClickListener mItemClickListener;
     private boolean isSelectedAll;
 
     public TeachersAdapter (FragmentActivity activity, ArrayList<Teaching> teacherArrayList) {
 
-        this.mTeachingArrayList = teacherArrayList;
         this.activity = activity;
+        mTeachingArrayList = teacherArrayList;
     }
 
     @NonNull
@@ -64,6 +64,7 @@ public class TeachersAdapter extends RecyclerView.Adapter<TeachersAdapter.MyView
 
     @Override
     public int getItemCount() {
+        Log.e("Teacher Array List:", String.valueOf(mTeachingArrayList));
         return mTeachingArrayList.size();
     }
 
@@ -98,8 +99,8 @@ public class TeachersAdapter extends RecyclerView.Adapter<TeachersAdapter.MyView
 
     public interface OnItemClickListener {
 
-        void onItemClick(View view, int position);
-        void oncheakboxClick(View view, int position);
+       public void onItemClick(View view, int position);
+       public void oncheakboxClick(View view, int position);
     }
 
     public void SetOnItemClickListener(OnItemClickListener mItemClickListener) {

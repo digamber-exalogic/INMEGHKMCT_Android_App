@@ -12,6 +12,18 @@ import com.example.exalogicsolutions.inmegh_kmct.Models.HolidayResponse.HolidayV
 import com.example.exalogicsolutions.inmegh_kmct.Models.LeaveResponse.AdminLeaveResponse;
 import com.example.exalogicsolutions.inmegh_kmct.Models.NoticeBoardResponse.AdminNoticeResponse;
 import com.example.exalogicsolutions.inmegh_kmct.Models.SignInResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.BatchResponse.BatchResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.CourseResponse.CourseResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.DepartmentResponse.DepartmentResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.NonTeachingResponse.NonTeachingResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.NonTeachingResponse.NonTeachingSentSmsResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.ParentResponse.ParentResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.ParentResponse.ParentSentSmsResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.SectionResponse.SectionResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.StudentResponse.StudentResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.StudentResponse.StudentSentSmsResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.TeachingResponse.TeacherSentSmsResponse;
+import com.example.exalogicsolutions.inmegh_kmct.Models.SmsResponse.TeachingResponse.TeachingResponse;
 import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
@@ -97,20 +109,41 @@ public interface RetrofitAPIInterface {
     public void OnSend(@Body JsonObject message, Callback<JsonObject> jsonObjectCallback);
 
     @POST("/directories/students_directory")
-    public void getStudentSmsDetails(@QueryMap Map<String, String> params, Callback<EmailReadResponse> collegeInfoCallback);
+    public void getStudentSmsDetails(@Body JsonObject message, Callback<StudentResponse> studentSmsViewResponseCallback);
 
     @POST("/directories/parents_directory")
-    public void getParentSmsDetails(@QueryMap Map<String, String> params, Callback<EmailReadResponse> collegeInfoCallback);
+    public void getParentSmsDetails(@Body JsonObject object, Callback<ParentResponse> parentSmsViewResponseCallback);
 
     @POST("/directories/employees_directory")
-    public void getEmployeeSmsDetails(@QueryMap Map<String, String> params, Callback<EmailReadResponse> collegeInfoCallback);
+    public void getEmployeeSmsDetails(@Body JsonObject object, Callback<TeachingResponse> employeeSmsViewResponseCallback);
 
     @POST("/sent_messages/sending_messages_for_students")
-    public void getStudentSendSms(@Body JsonObject message, Callback<JsonObject> jsonObjectCallback);
+    public void getStudentSendSms(@Body JsonObject message, Callback<StudentSentSmsResponse> jsonObjectCallback);
 
     @POST("/sent_messages/sending_messages_for_parents")
-    public void getParentSendSms(@Body JsonObject message, Callback<JsonObject> jsonObjectCallback);
+    public void getParentSendSms(@Body JsonObject message, Callback<ParentSentSmsResponse> parentSentSmsCallback);
 
     @POST("/sent_messages/sending_messages_for_employees")
-    public void getEmployeeSendSms(@Body JsonObject message, Callback<JsonObject> jsonObjectCallback);
+    public void getEmployeeSendSms(@Body JsonObject message, Callback<TeacherSentSmsResponse> employeeSentSmsCallback);
+
+    @GET("/directories/non_teaching_employees")
+    public void getNonTeachingEmployeeSmsDetails(Callback<NonTeachingResponse> nonTeachingResponseCallback);
+
+    @POST("/sent_messages/sending_messages_for_staff")
+    public void getNonTeachingEmployeeSendSms(@Body JsonObject message, Callback<NonTeachingSentSmsResponse> jsonObjectCallback);
+
+    @GET("/indexes/get_courses")
+    public void getCourses(Callback<CourseResponse> courseResponseCallback);
+
+    @POST("/indexes/get_batches")
+    public void getBatches(@QueryMap Map<String, String> params, Callback<BatchResponse> batchResponseCallback);
+
+    @POST("/indexes/get_sections")
+    public void getSections(@QueryMap Map<String, String> params, Callback<SectionResponse> sectionResponseCallback);
+
+    @POST("/indexes/get_semesters")
+    public void getSemsters(Callback<MailResponse> mailResponseCallback);
+
+    @POST("/indexes/get_departments")
+    public void getDepartments(@QueryMap Map<String, String> params, Callback<DepartmentResponse> departmentResponseCallback);
 }

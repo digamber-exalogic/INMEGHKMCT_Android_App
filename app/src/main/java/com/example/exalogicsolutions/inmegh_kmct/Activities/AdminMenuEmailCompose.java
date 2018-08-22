@@ -3,6 +3,7 @@ package com.example.exalogicsolutions.inmegh_kmct.Activities;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,7 +56,7 @@ public class AdminMenuEmailCompose extends AppCompatActivity {
     private int spinpos;
     private ArrayList<String> items;
     private CheckBox allCb;
-    private EditText etSubject, etdata, etTo;
+    private TextInputEditText etSubject, etdata, etTo;
     private ImageView etAttachment;
     private JsonArray allStudents;
 
@@ -172,8 +173,13 @@ public class AdminMenuEmailCompose extends AppCompatActivity {
 
     private boolean validateFields() {
 
-        if (etTo.getText().toString().trim().isEmpty()) {
+        if (Objects.requireNonNull(etTo.getText()).toString().trim().isEmpty()) {
             Toast.makeText(this, "Select Items which is present in the list", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (Objects.requireNonNull(etSubject.getText()).toString().trim().isEmpty()) {
+            Toast.makeText(this, "Please Enter Subject", Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -225,9 +231,9 @@ public class AdminMenuEmailCompose extends AppCompatActivity {
                             UIUtil.stopProgressDialog(getApplicationContext());
                         }
                     });
-                } else {
-                    Toast.makeText(this, "Please Connect to Internet", Toast.LENGTH_SHORT).show();
                 }
+            } else {
+                Toast.makeText(this, "Please Connect to Internet", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             e.printStackTrace();

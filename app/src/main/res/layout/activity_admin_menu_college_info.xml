@@ -10,13 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="2"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.8"
-            android:weightSum="1">
+            android:weightSum="1"
+            >
 
             <ImageView
                 android:id="@+id/imgCollegeInfo"
@@ -24,6 +26,7 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/greengray"
                 android:scaleType="centerCrop"
+
                 />
 
         </LinearLayout>

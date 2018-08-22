@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.exalogicsolutions.inmegh_kmct.Activities.AdminDashboardActivity;
 import com.example.exalogicsolutions.inmegh_kmct.Activities.BottomBarActivityAdmin;
+import com.example.exalogicsolutions.inmegh_kmct.Activities.EmployeeActivities.BottomBarActivityEmployee;
 import com.example.exalogicsolutions.inmegh_kmct.Api.RetrofitAPI;
 import com.example.exalogicsolutions.inmegh_kmct.Database.PreferencesManger;
 import com.example.exalogicsolutions.inmegh_kmct.Models.SignInResponse;
@@ -30,9 +31,13 @@ import com.example.exalogicsolutions.inmegh_kmct.Utilities.UIUtil;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.JsonObject;
 
+import java.util.Objects;
+
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -45,12 +50,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         logImage = findViewById(R.id.logImage);
         loginButtonLayout = findViewById(R.id.loginButtonLayout);
-        visiblePassword = findViewById(R.id.visibilityOnImage);
-        invisiblePassword = findViewById(R.id.visibilityOofImage);
+        /*visiblePassword = findViewById(R.id.visibilityOnImage);
+        invisiblePassword = findViewById(R.id.visibilityOofImage);*/
         etUserName = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
        /* etPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);*/
@@ -66,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         loginButtonLayout.setOnClickListener((View.OnClickListener) this);
 
-        invisiblePassword.setOnClickListener(new View.OnClickListener() {
+        /*invisiblePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -74,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 visiblePassword.setVisibility(View.VISIBLE);
                 invisiblePassword.setVisibility(View.GONE);
-                /*etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());*/
+                *//*etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());*//*
                 start = etPassword.getSelectionStart();
                 end=etPassword.getSelectionEnd();
                 etPassword.setTransformationMethod(null);
@@ -91,16 +96,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 visiblePassword.setVisibility(View.GONE);
                 invisiblePassword.setVisibility(View.VISIBLE);
-                /*etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());*/
-                /*etPassword.setTransformationMethod(new PasswordTransformationMethod());*/
-                /*etPassword.setTransformationMethod(null);*/
-                /*etPassword.setTransformationMethod(new PasswordTransformationMethod());*/
+                *//*etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());*//*
+                *//*etPassword.setTransformationMethod(new PasswordTransformationMethod());*//*
+                *//*etPassword.setTransformationMethod(null);*//*
+                *//*etPassword.setTransformationMethod(new PasswordTransformationMethod());*//*
                 start = etPassword.getSelectionStart();
                 end=etPassword.getSelectionEnd();
                 etPassword.setTransformationMethod(new PasswordTransformationMethod());
                 etPassword.setSelection(start,end);
             }
-        });
+        });*/
 
         etUserName.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -150,15 +155,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private boolean validateCredentials() {
+public boolean validateCredentials(){
 
         if (etUserName.getText().toString().trim().isEmpty()) {
-            etUserName.setError("Please Enter Username!");
+            Toast.makeText(getApplicationContext(),"Please Enter Username!", Toast.LENGTH_SHORT).show();
             return false;
         }
 
-        if (etPassword.getText().toString().trim().isEmpty()) {
-            etPassword.setError("Please Enter Password!");
+        if (Objects.requireNonNull(etPassword.getText()).toString().trim().isEmpty()) {
+            Toast.makeText(getApplicationContext(),"Please Enter Password!", Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -172,7 +177,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("email", etUserName.getText().toString());
-                jsonObject.addProperty("password", etPassword.getText().toString());
+                jsonObject.addProperty("password", Objects.requireNonNull(etPassword.getText()).toString());
                 //jsonObject.addProperty("devise_id", ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId());
                 /*jsonObject.addProperty("registration_id", FirebaseInstanceId.getInstance().getToken());*/
                 jsonObject.addProperty("mobile_os", "Android");
@@ -201,11 +206,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 PreferencesManger.addStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE, jsonObject.getUserType());
                                 if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Admin")) {
                                     /*startActivity(new Intent(getApplicationContext(), BottomBarActivityAdmin.class));*/
-                                    Toast.makeText(getApplicationContext(), "Permission Denied For Super Admin Access...", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Permission Denied For Super Admin Access...", LENGTH_SHORT).show();
                                 }
                                 if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Branch Admin")) {
                                     startActivity(new Intent(getApplicationContext(), BottomBarActivityAdmin.class));
-                                    Toast.makeText(getApplicationContext(), "Login successfully...", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Login successfully...", LENGTH_SHORT).show();
+                                }
+                                if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Teaching staff")) {
+                                    startActivity(new Intent(getApplicationContext(), BottomBarActivityEmployee.class));
+                                    Toast.makeText(getApplicationContext(), "Login successfully...", LENGTH_SHORT).show();
                                 }
                                 /*if (PreferencesManger.getStringFields(getApplicationContext(), Constants.Pref.KEY_USER_TYPE).equalsIgnoreCase("Hod")) {
                                     startActivity(new Intent(getApplicationContext(), NewEmployeeLanding.class));
@@ -217,13 +226,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     startActivity(new Intent(getApplicationContext(), AdminLandingActivity.class));
                                 }*/
                             } else if (jsonObject.getStatus() == Constants.SWR) {
-                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), LENGTH_SHORT).show();
                             } else if (jsonObject.getStatus() == Constants.NDF) {
-                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), LENGTH_SHORT).show();
                             } else if (jsonObject.getStatus() == Constants.CMF) {
-                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), jsonObject.getMessage(), LENGTH_SHORT).show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -236,7 +245,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 });
             } else {
-                Toast.makeText(this, "Please Connect to Internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please Connect to Internet", LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             e.printStackTrace();
